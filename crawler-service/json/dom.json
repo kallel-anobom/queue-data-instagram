@@ -1,0 +1,8 @@
+{
+	"notExist": ".dialog-404",
+	"numberPosts": "span.g47SY",
+	"listPost": "div.v1Nh3 > a",
+	"likeNumber": "div.Nm9Fw",
+	"urlImage": "div.KL4Bh img",
+	"description": "div.C4VMK span"
+}
