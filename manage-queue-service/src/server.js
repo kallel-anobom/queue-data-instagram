@@ -9,7 +9,7 @@ const app = express();
 
 BullBoard.setQueues(Queue);
 
-app.get('/', async (req, res) => {
+app.get('/data', async (req, res) => {
   let response = await fetch(`http://localhost:3332/user`);
   let data = await response.json()
 

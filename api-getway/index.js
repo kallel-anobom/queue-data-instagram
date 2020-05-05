@@ -14,7 +14,7 @@ app.get('/user', (req, res, next) => {
   crawlerServiceProxy(req, res, next);
 });
 
-app.get('/', (req, res, next) => {
+app.get('/data', (req, res, next) => {
   manageQueueServiceProxy(req, res, next);
 });
 

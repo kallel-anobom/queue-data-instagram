@@ -24,7 +24,7 @@ services:
     ports:
       - 3331:3331
     command:
-      sh -c 'npm i && node server.js && node queue.js'
+      sh -c 'npm i && node src/server.js && src/node queue.js'
 
   api-getway:
     links:
