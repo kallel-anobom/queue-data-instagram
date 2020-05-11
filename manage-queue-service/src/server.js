@@ -10,12 +10,16 @@ const app = express();
 BullBoard.setQueues(Queue);
 
 app.get('/data', async (req, res) => {
-  let response = await fetch(`http://localhost:3332/user`);
-  let data = await response.json()
+  try {
+    let response = await fetch(`http://10.5.0.4:3332/user`);
+    let data = await response.json();
+    
+    await Queue.add({ data });
 
-  await Queue.add({ data });
-
-  res.send({ data });
+    res.send({ data });
+  } catch (error) {
+    console.error(error);
+  }  
 });
 
 app.use('/admin/queues', BullBoard.UI);

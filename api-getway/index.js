@@ -7,8 +7,8 @@ const helmet = require('helmet');
 
 const app = express();
 
-const crawlerServiceProxy = httpProxy('http://localhost:3332');
-const manageQueueServiceProxy = httpProxy('http://localhost:3331');
+const crawlerServiceProxy = httpProxy('crawler-service:3332');
+const manageQueueServiceProxy = httpProxy('manage-queue-server:3331');
 
 app.get('/user', (req, res, next) => {
   crawlerServiceProxy(req, res, next);
